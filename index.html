@@ -10,43 +10,51 @@
 <body>
     <!-- Heading screen 1 and 2 -->
     <header>
-        <h1>Rock Paper Scissor Game</h1>
+        <h1>Rock, Paper and Scissors Game</h1>
     </header>
     
     <!--Message Board screen 1 only-->
-    <div id ="message-board"></div>
+    <div id ="message-board">Message goes here. eg. You win or loss or draw</div>
 
-    <!-- Score Board screen 2 only-->
-    <div class = "score-board">
+     <!-- Score Board screen 2 only-->
+     <div class = "score-board">
         <div id = "user-label">You</div>
         <div id = "computer-label">Computer</div>
         <span id ="user-score">0</span>:<span id = "computer-score">0</span> 
     </div>
 
-    <!--H2 Message screen 2 only-->
-    <div class = "result">
-    <p>You win or You lose message</p>  
-    </div>
+
+    <!-- Play and Rules Button screen 1 only-->
+    <div class = "play-and-rulesbtn">
+        <button class = "play-and-rulesbtn" id ="play-button">Play</button>
+        <button class = "play-and-rulesbtn" id ="rules-button">Rules</button>
+    </div>  
+
+   
+  
 
     <!--Option Buttons screen 2 only-->
     <div class = "optionsbtn">
-        <div id ="rock">Rock image..</div>
-        <div id ="paper">Paper image..</div>
-        <div id ="scissors">Scissors image..</div>
+        <div id ="rock">
+            <img src="assets/images/rock.jpeg" alt="A hand fist" width=" 100px;">
+            
+        </div>
+        <div id ="paper">
+            <img src="assets/images/paper.jpeg" alt="An open hand palm" width ="100px;">
+
+        </div>
+        <div id ="scissors">
+            <img src="assets/images/scissor.jpeg" alt="A hand in a scissor gesture" width ="100px;">
+        </div>
     </div>
 
     <!-- Reset Button screen 2 only-->
     <div class = "resetbtn">
-        <div id ="reset">Reset</div>
+        <button id ="reset">Reset</button>
     </div>    
 
-    <!-- Play and Rules Button screen 2 only-->
-    <div class = "play-and-rulesbtn">
-        <div id ="play">Play</div>
-        <div id ="rules">Rules</div>
-    </div>
-
-      
+     
+    
     <script src="assets/js/script.js"></script>
 </body>
 </html>
