@@ -1,0 +1,66 @@
+/* Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+
+/*Clear all formattings*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Golos', sans-serif;
+    width: 100%;
+    height: auto;
+    background-color: rgb(104, 137, 215);
+}
+
+/*Header*/
+header {
+    background-color: hellblau;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+#message-board {
+    
+    border: 3px solid black;
+    border-radius: 10px;
+    width:fit-content;
+    height: auto;
+    padding:40px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: hellblau; 
+    font-size: 1.5rem; 
+}
+
+.play-and-rulesbtn {
+    border-radius: 70%;
+    font-size: 1.5rem;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    transition-property: font-size;               
+    transition: .1s;
+}
+.play-and-rulesbtn:hover {
+    font-size: 1.7rem;
+}
+#play-button, #rules-button {
+    background-color: aqua;
+    margin: 10px; 
+    
+    
+}
+
+.score-board {
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 200px;
+    margin: auto;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
