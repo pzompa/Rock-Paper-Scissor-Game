@@ -35,25 +35,6 @@ header {
     font-size: 1.5rem; 
 }
 
-.play-and-rulesbtn {
-    border-radius: 70%;
-    font-size: 1.5rem;
-    width: fit-content;
-    margin: auto;
-    padding: 20px;
-    transition-property: font-size;               
-    transition: .1s;
-}
-.play-and-rulesbtn:hover {
-    font-size: 1.7rem;
-}
-#play-button, #rules-button {
-    background-color: aqua;
-    margin: 10px; 
-    
-    
-}
-
 .score-board {
     border: 3px solid black;
     border-radius: 10px;
@@ -61,6 +42,46 @@ header {
     margin: auto;
     font-size: 1.3rem;
     text-align: center;
+    margin-top: 25px;
+}
+
+.play-and-rulesbtn {
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    transition-property: color;               
+    transition: .1s;
+}
+.play-and-rulesbtn:hover {
+    color: whitesmoke;
+}
+#play-button, #rules-button {
+    background-color: aqua;
+    margin: 10px; 
+}
+
+.optionsbtn, img {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+#reset {
+    display: flex;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    background-color: aqua;
+    transition-property: color;               
+    transition: .1s;
+}
+#reset:hover {
+    color: whitesmoke;
 }
 
 
