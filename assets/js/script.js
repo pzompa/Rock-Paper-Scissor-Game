@@ -82,7 +82,6 @@ function generateComputerChoice() {
  * compares and indicates who won
  * and gives result
  */
-
 function getResult() {
     if (userChoice === 'rock') {
         switch (computerChoice) {
@@ -91,9 +90,13 @@ function getResult() {
                 break;
             case 'paper':
                 resultMessage = 'You lose!'
+                computerCounter = ++computerCounter
+                computerCounterDisplay.innerHTML = computerCounter
                 break;
             case 'scissors':
                 resultMessage = 'You Win!'
+                youCounter = ++youCounter
+                youCounterDisplay.innerHTML = youCounter
                 break;
             default:
                 resultMessage = ''
@@ -102,12 +105,16 @@ function getResult() {
         switch (computerChoice) {
             case 'rock':
                 resultMessage = 'You Win!'
+                youCounter = ++youCounter
+                youCounterDisplay.innerHTML = youCounter
                 break;
             case 'paper':
                 resultMessage = 'Its a draw!'                
                 break;
             case 'scissors':
                 resultMessage = 'You lose!'
+                computerCounter = ++computerCounter
+                computerCounterDisplay.innerHTML = computerCounter
                 break;
             default:
                 resultMessage = ''
@@ -116,9 +123,13 @@ function getResult() {
         switch (computerChoice) {
             case 'rock':
                 resultMessage = 'You lose!'
+                computerCounter = ++computerCounter
+                computerCounterDisplay.innerHTML = computerCounter
                 break;
             case 'paper':
                 resultMessage = 'You Win!'
+                youCounter = ++youCounter
+                youCounterDisplay.innerHTML = youCounter
                 break;
             case 'scissors':
                 resultMessage = 'Its a draw!'
