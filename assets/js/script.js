@@ -1,4 +1,3 @@
-// docstring
 /* runs runGame() after loading body.
 <body onload="runGame();">
 */
@@ -7,10 +6,12 @@
  * Hides not relavent elements - initial screen
  */
 function runGame() {
-    // initial style
+    document.getElementById('play-button').style.display = 'flex';
     document.getElementById('image').style.display = 'none';
     document.getElementById('result').style.display = 'none';
     document.getElementById('reset').style.display = 'none';
+    document.getElementById('quit-game').style.display= 'none';
+    messageBoardDisplay.innerHTML = `<h2>Are you Ready? <br> Press Play</h2>`;
 }
 /**
  * Creat variables and get all the relevant elements
@@ -23,6 +24,16 @@ const messageBoardDisplay = document.getElementById('message-board')
 const resultMessageDisplay = document.getElementById('result-message')
 const youCounterDisplay = document.getElementById('you-counter')
 const computerCounterDisplay = document.getElementById('computer-counter')
+
+// Reset counter to Zero
+const resetButton = document.getElementById('reset')
+resetButton.addEventListener('click', resetCounter)
+function resetCounter() {
+    youCounter= 0
+    computerCounter= 0
+    youCounterDisplay.innerHTML= youCounter
+    computerCounterDisplay.innerHTML = computerCounter
+}
 
 let reason
 let userChoice
@@ -44,6 +55,7 @@ function playButtonFunction(){
     document.getElementById('play-button').style.display = 'none';
     document.getElementById('reset').style.display = 'block';
     document.getElementById('message-board').innerHTML = '<h2>Choose: Rock, Paper or Scissors</h2>'
+    document.getElementById('quit-game').style.display= 'flex';
 }
 
 // Add eventlistener to choices images 
@@ -69,13 +81,13 @@ function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * possibleChoices.length + 1)
 
     if (randomNumber === 1) {
-        computerChoice = 'rock'
+        computerChoice = 'Rock'
     }
     if (randomNumber === 2) {
-        computerChoice = 'paper'
+        computerChoice = 'Paper'
     }
     if (randomNumber === 3) {
-        computerChoice = 'scissors'
+        computerChoice = 'Scissors'
     }
 }
 /**
@@ -83,36 +95,36 @@ function generateComputerChoice() {
  * and gives result
  */
 function getResult() {
-    if (userChoice === 'rock') {
+    if (userChoice === 'Rock') {
         switch (computerChoice) {
-            case 'rock':
+            case 'Rock':
                 resultMessage = 'Its a draw!'
                 break;
-            case 'paper':
-                resultMessage = 'You lose!'
+            case 'Paper':
+                resultMessage = 'Paper covers Rock. You lose!'
                 computerCounter = ++computerCounter
                 computerCounterDisplay.innerHTML = computerCounter
                 break;
-            case 'scissors':
-                resultMessage = 'You Win!'
+            case 'Scissors':
+                resultMessage = 'Rock crushes Scissors.You Win!'
                 youCounter = ++youCounter
                 youCounterDisplay.innerHTML = youCounter
                 break;
             default:
                 resultMessage = ''
         }
-    } else if (userChoice === 'paper') {
+    } else if (userChoice === 'Paper') {
         switch (computerChoice) {
-            case 'rock':
-                resultMessage = 'You Win!'
+            case 'Rock':
+                resultMessage = 'Paper covers Rock.You Win!'
                 youCounter = ++youCounter
                 youCounterDisplay.innerHTML = youCounter
                 break;
-            case 'paper':
+            case 'Paper':
                 resultMessage = 'Its a draw!'                
                 break;
-            case 'scissors':
-                resultMessage = 'You lose!'
+            case 'Scissors':
+                resultMessage = 'Scissors cut Paper.You lose!'
                 computerCounter = ++computerCounter
                 computerCounterDisplay.innerHTML = computerCounter
                 break;
@@ -121,17 +133,17 @@ function getResult() {
         }
     } else {
         switch (computerChoice) {
-            case 'rock':
-                resultMessage = 'You lose!'
+            case 'Rock':
+                resultMessage = 'Rock crushes Scissors.You lose!'
                 computerCounter = ++computerCounter
                 computerCounterDisplay.innerHTML = computerCounter
                 break;
-            case 'paper':
-                resultMessage = 'You Win!'
+            case 'Paper':
+                resultMessage = 'Scissors cut Paper.You Win!'
                 youCounter = ++youCounter
                 youCounterDisplay.innerHTML = youCounter
                 break;
-            case 'scissors':
+            case 'Scissors':
                 resultMessage = 'Its a draw!'
                 break;
             default:
@@ -142,3 +154,15 @@ function getResult() {
                                     Computer has chosen : ${computerChoice}<br>
                                     ${resultMessage}</h2>`;
 }
+
+// quit Game
+const quitGameDisplay= document.getElementById('quit-game')
+quitGameDisplay.addEventListener('click', quitGame)
+
+function quitGame(){
+    resetCounter()
+    runGame()
+}
+
+
+    

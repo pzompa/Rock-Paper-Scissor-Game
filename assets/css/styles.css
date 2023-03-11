@@ -67,7 +67,7 @@ header {
     color: whitesmoke;
 }
 
-#play-button, #rules-button, #reset {
+#play-button, #quit-game, #reset {
     background-color: aqua;   
     border-radius: 10px;
     font-size: 1.5rem;
@@ -97,6 +97,10 @@ button {
 #score-heading,#score-number{
     display: grid;
     margin: 5px;
+}
+#quit-game{
+    display: flex;
+    margin: auto;
 }
 
 .social-media {
