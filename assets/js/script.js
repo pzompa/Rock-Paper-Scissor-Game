@@ -56,7 +56,7 @@ function playButtonFunction(){
     document.getElementById('image').style.display = 'flex';
     document.getElementById('result').style.display = 'flex';
     document.getElementById('play-button').style.display = 'none';
-    document.getElementById('reset').style.display = 'block';
+    document.getElementById('reset').style.display = 'flex';
     document.getElementById('message-board').innerHTML = '<h2>Choose: Rock, Paper or Scissors</h2>'
     document.getElementById('quit-game').style.display= 'flex';
     document.getElementById('game-title').style.display='none'
