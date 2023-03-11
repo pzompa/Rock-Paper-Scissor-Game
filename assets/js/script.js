@@ -6,7 +6,7 @@
 /** 
  * Hides not relavent elements - initial screen
  */
-function runGame () {
+function runGame() {
     // initial style
     document.getElementById('image').style.display = 'none';
     document.getElementById('result').style.display = 'none';
@@ -36,11 +36,19 @@ let computerCounter
  * Get playbutton and add eventlistener to it
  */
 const playButton = document.getElementById('play-button')
-playButton.addEventListener('click',playButtonFunction)
+playButton.addEventListener('click', playButtonFunction)
+
+function playButtonFunction(){
+    document.getElementById('image').style.display = 'flex';
+    document.getElementById('result').style.display = 'flex';
+    document.getElementById('play-button').style.display = 'none';
+    document.getElementById('reset').style.display = 'block';
+    document.getElementById('message-board').innerHTML = '<h2>Choose: Rock, Paper or Scissors</h2>'
+}
 
 // Add eventlistener to choices images 
-for(let choice=0;choice<possibleChoices.length;i++){
-    possibleChoices[choice].addEventListener('click',gameChoice)
+for (let choice = 0; choice < possibleChoices.length; choice++) {
+    possibleChoices[choice].addEventListener('click', gameChoice)
 }
 
 /**
@@ -57,16 +65,16 @@ function gameChoice(e) {
  * Generate computerChoice
  * assign it to Computer Choice variable
  */
-function generateComputerChoice(){
-    const randomNumber = Math.floor(Math.random() * possibleChoices.length +1)
+function generateComputerChoice() {
+    const randomNumber = Math.floor(Math.random() * possibleChoices.length + 1)
 
-    if(randomNumber === 1){
+    if (randomNumber === 1) {
         computerChoice = 'rock'
     }
-    if(randomNumber === 2){ 
+    if (randomNumber === 2) {
         computerChoice = 'paper'
     }
-    if(randomNumber === 3){
+    if (randomNumber === 3) {
         computerChoice = 'scissors'
     }
 }
