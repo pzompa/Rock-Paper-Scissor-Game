@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,54 +8,71 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+
+<body onload="runGame();">
     <!-- Heading screen 1 and 2 -->
     <header>
         <h1>Rock, Paper and Scissors Game</h1>
+
     </header>
-    
-    <!--Message Board screen 1 only-->
-    <div id ="message-board">Message goes here. eg. You win or loss or draw</div>
+    <main>
+        <!--Message Board screen 1 only-->
+        <div id="message-board"><h2>Are you Ready? <br> Press Play</h2></div>
 
-     <!-- Score Board screen 2 only-->
-     <div class = "score-board">
-        <div id = "user-label">You</div>
-        <div id = "computer-label">Computer</div>
-        <span id ="user-score">0</span>:<span id = "computer-score">0</span> 
-    </div>
-
-
-    <!-- Play and Rules Button screen 1 only-->
-    <div class = "play-and-rulesbtn">
-        <button class = "play-and-rulesbtn" id ="play-button">Play</button>
-        <button class = "play-and-rulesbtn" id ="rules-button">Rules</button>
-    </div>  
-
-   
-  
-
-    <!--Option Buttons screen 2 only-->
-    <div class = "optionsbtn">
-        <div id ="rock">
-            <img src="assets/images/rock.jpeg" alt="A hand fist" width=" 100px;">
-            
+        <!-- Score Board screen 2 only-->
+        <div>
+            <!--User Choice-->
+            <div id="user-choice"></div>
+            <!--score-->
+            <div id="result-message"></div>
+            <div class="score-board" id ="result">
+                <div id='score-heading'>
+                    <div><h2>You</h2></div>
+                    <div><h2><span id="you-counter">0</span></h2></div>
+                </div>
+                <div>
+                    <div><h2>:</h2></div>
+                    <div><h2>:</h2></div>
+                </div>
+                <div id="score-number">
+                    <div><h2>Computer</h2></div>
+                    <div><h2><span id="computer-counter">0</span></h2></div>
+                </div>
+            </div>
+            <!--Computer choice-->
+            <div id="computer-choice"></div>
         </div>
-        <div id ="paper">
-            <img src="assets/images/paper.jpeg" alt="An open hand palm" width ="100px;">
 
+        <!-- Play and Rules Button screen 1 only-->
+        <div class="play-and-rulesbtn">
+            <button class="play-and-rulesbtn" id="play-button">Play</button>
+            <button class="play-and-rulesbtn" id="rules-button">Rules</button>
         </div>
-        <div id ="scissors">
-            <img src="assets/images/scissor.jpeg" alt="A hand in a scissor gesture" width ="100px;">
+
+        <!--Option Buttons screen 2 only-->
+        <div class="optionsbtn" id ="image">
+            <div>
+                <button><img id="rock" src="assets/images/rock.png" alt="rock icon" width=" 150px;"></button>
+            </div>
+            <div >
+                <button><img id="paper" src="assets/images/paper.png" alt="paper icon" width="150px;"></button>
+            </div>
+            <div>
+                <button><img id="scissors" src="assets/images/scissor.png" alt="scissors icon" width="150px;"></button>
+            </div>
         </div>
-    </div>
 
-    <!-- Reset Button screen 2 only-->
-    <div class = "resetbtn">
-        <button id ="reset">Reset</button>
-    </div>    
+        <!-- Reset Button screen 2 only-->
+        <div class="resetbtn">
+            <button id="reset">Reset</button>
+        </div>
+    </main>
+    <!-- link to social media goes here -->
+    <footer>
+       
+    </footer>
 
-     
-    
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
