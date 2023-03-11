@@ -37,3 +37,19 @@ let computerCounter
  */
 const playButton = document.getElementById('play-button')
 playButton.addEventListener('click',playButtonFunction)
+
+// Add eventlistener to choices images 
+for(let choice=0;choice<possibleChoices.length;i++){
+    possibleChoices[choice].addEventListener('click',gameChoice)
+}
+
+/**
+ * define function for click event
+ */
+function gameChoice(e) {
+    userChoice = e.target.id
+    youCounter = parseInt(youCounterDisplay.innerHTML)
+    computerCounter = parseInt(computerCounterDisplay.innerHTML)
+    generateComputerChoice()
+    getResult()
+}
