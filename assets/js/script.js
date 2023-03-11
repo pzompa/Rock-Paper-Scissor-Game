@@ -53,3 +53,20 @@ function gameChoice(e) {
     generateComputerChoice()
     getResult()
 }
+/**
+ * Generate computerChoice
+ * assign it to Computer Choice variable
+ */
+function generateComputerChoice(){
+    const randomNumber = Math.floor(Math.random() * possibleChoices.length +1)
+
+    if(randomNumber === 1){
+        computerChoice = 'rock'
+    }
+    if(randomNumber === 2){ 
+        computerChoice = 'paper'
+    }
+    if(randomNumber === 3){
+        computerChoice = 'scissors'
+    }
+}
