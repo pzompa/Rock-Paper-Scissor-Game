@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Golos', sans-serif;
     width: 100%;
@@ -22,17 +23,19 @@ header {
     font-size: 1.5rem;
     margin-top: 20px;
 }
-#message-board {    
+
+#message-board {
     border: 3px solid black;
     border-radius: 10px;
-    width:fit-content;
+    width: fit-content;
     height: auto;
-    padding:40px;
+    padding: 20px;
     margin: auto;
     margin-top: 30px;
-    background-color: hellblau; 
-    font-size: 1.5rem; 
+    background-color: hellblau;
+    font-size: 1.5rem;
 }
+
 
 .score-board {
     border: 2px solid black;
@@ -40,16 +43,17 @@ header {
     width: fit-content;
     margin: auto;
     font-size: 1rem;
-    text-align:center;
+    text-align: center;
     margin-top: 25px;
-    padding: 20px;    
+    padding: 20px;
 }
 
 .score-board h2 {
     margin-bottom: 5px
 }
 
-#user-label, #computer-label {
+#user-label,
+#computer-label {
     font-size: 1.3rem;
 }
 
@@ -59,7 +63,7 @@ header {
     width: fit-content;
     margin: auto;
     padding: 20px;
-    transition-property: color;               
+    transition-property: color;
     transition: .1s;
 }
 
@@ -67,18 +71,21 @@ header {
     color: whitesmoke;
 }
 
-#play-button, #quit-game, #reset {
-    background-color: aqua;   
+#play-button,
+#quit-game,
+#reset {
+    background-color: aqua;
     border-radius: 10px;
     font-size: 1.5rem;
     width: fit-content;
     margin: auto;
     padding: 20px;
-    transition-property: color;               
+    transition-property: color;
     transition: .1s;
 }
 
-.optionsbtn, img {
+.optionsbtn,
+img {
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -94,17 +101,19 @@ button {
     border-radius: 50%;
 }
 
-#score-heading,#score-number{
+#score-heading,
+#score-number {
     display: grid;
     margin: 5px;
 }
-#quit-game{
+
+#quit-game {
     display: flex;
     margin: auto;
 }
 
 .social-media {
-   
+
     font-size: 2.5rem;
     list-style: none;
     padding-top: 20px;
@@ -112,10 +121,52 @@ button {
     width: fit-content;
 
 }
+
 .social-media ul li {
     color: aqua;
     list-style-type: none;
     display: inline-flex;
     justify-content: center;
 
+}
+
+/* Media queries for small screen (max screen size 700px and 450) */
+
+@media screen and (max-width: 700px) {
+    
+    #game-title {
+        font-size: 2rem;
+        width: 90%;
+    }
+
+    #message-board {
+        font-size: 1rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    #Rock,
+    #Paper,
+    #Scissors {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #game-title {
+        font-size: 1.5rem;
+        width: 90%;
+    }
+
+    #message-board {
+        font-size:0.8rem;
+        width: 80%;
+        text-align: center;
+    }
+    
+    #Rock,
+    #Paper,
+    #Scissors {
+        width: 75px;
+    }
 }
