@@ -22,8 +22,7 @@ header {
     font-size: 1.5rem;
     margin-top: 20px;
 }
-#message-board {
-    
+#message-board {    
     border: 3px solid black;
     border-radius: 10px;
     width:fit-content;
@@ -36,13 +35,22 @@ header {
 }
 
 .score-board {
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 10px;
-    width: 200px;
+    width: fit-content;
     margin: auto;
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1rem;
+    text-align:center;
     margin-top: 25px;
+    padding: 20px;    
+}
+
+.score-board h2 {
+    margin-bottom: 5px
+}
+
+#user-label, #computer-label {
+    font-size: 1.3rem;
 }
 
 .play-and-rulesbtn {
@@ -54,12 +62,20 @@ header {
     transition-property: color;               
     transition: .1s;
 }
+
 .play-and-rulesbtn:hover {
     color: whitesmoke;
 }
+
 #play-button, #rules-button {
-    background-color: aqua;
-    margin: 10px; 
+    background-color: aqua;   
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    transition-property: color;               
+    transition: .1s;
 }
 
 .optionsbtn, img {
@@ -80,8 +96,16 @@ header {
     transition-property: color;               
     transition: .1s;
 }
+
 #reset:hover {
     color: whitesmoke;
 }
 
+button {
+    border-radius: 50%;
+}
 
+#score-heading,#score-number{
+    display: grid;
+    margin: 5px;
+}
