@@ -31,3 +31,9 @@ let result
 let resultMessage
 let youCounter
 let computerCounter
+
+/**
+ * Get playbutton and add eventlistener to it
+ */
+const playButton = document.getElementById('play-button')
+playButton.addEventListener('click',playButtonFunction)
