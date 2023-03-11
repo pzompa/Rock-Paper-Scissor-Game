@@ -78,3 +78,56 @@ function generateComputerChoice() {
         computerChoice = 'scissors'
     }
 }
+/**
+ * compares and indicates who won
+ * and gives result
+ */
+
+function getResult() {
+    if (userChoice === 'rock') {
+        switch (computerChoice) {
+            case 'rock':
+                resultMessage = 'Its a draw!'
+                break;
+            case 'paper':
+                resultMessage = 'You lose!'
+                break;
+            case 'scissors':
+                resultMessage = 'You Win!'
+                break;
+            default:
+                resultMessage = ''
+        }
+    } else if (userChoice === 'paper') {
+        switch (computerChoice) {
+            case 'rock':
+                resultMessage = 'You Win!'
+                break;
+            case 'paper':
+                resultMessage = 'Its a draw!'                
+                break;
+            case 'scissors':
+                resultMessage = 'You lose!'
+                break;
+            default:
+                resultMessage = ''
+        }
+    } else {
+        switch (computerChoice) {
+            case 'rock':
+                resultMessage = 'You lose!'
+                break;
+            case 'paper':
+                resultMessage = 'You Win!'
+                break;
+            case 'scissors':
+                resultMessage = 'Its a draw!'
+                break;
+            default:
+                resultMessage = ''
+        }
+    }
+    messageBoardDisplay.innerHTML = `<h2>You have chosen : ${userChoice}<br>
+                                    Computer has chosen : ${computerChoice}<br>
+                                    ${resultMessage}</h2>`;
+}
