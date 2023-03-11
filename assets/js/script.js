@@ -6,12 +6,13 @@
  * Hides not relavent elements - initial screen
  */
 function runGame() {
+    messageBoardDisplay.innerHTML = `<h2>Are you Ready? <br> Press Play</h2>`;
     document.getElementById('play-button').style.display = 'flex';
     document.getElementById('image').style.display = 'none';
     document.getElementById('result').style.display = 'none';
     document.getElementById('reset').style.display = 'none';
     document.getElementById('quit-game').style.display= 'none';
-    messageBoardDisplay.innerHTML = `<h2>Are you Ready? <br> Press Play</h2>`;
+    
 }
 /**
  * Creat variables and get all the relevant elements
@@ -24,6 +25,8 @@ const messageBoardDisplay = document.getElementById('message-board')
 const resultMessageDisplay = document.getElementById('result-message')
 const youCounterDisplay = document.getElementById('you-counter')
 const computerCounterDisplay = document.getElementById('computer-counter')
+
+
 
 // Reset counter to Zero
 const resetButton = document.getElementById('reset')
@@ -56,6 +59,7 @@ function playButtonFunction(){
     document.getElementById('reset').style.display = 'block';
     document.getElementById('message-board').innerHTML = '<h2>Choose: Rock, Paper or Scissors</h2>'
     document.getElementById('quit-game').style.display= 'flex';
+    document.getElementById('game-title').style.display='none'
 }
 
 // Add eventlistener to choices images 
@@ -150,8 +154,8 @@ function getResult() {
                 resultMessage = ''
         }
     }
-    messageBoardDisplay.innerHTML = `<h2>You have chosen : ${userChoice}<br>
-                                    Computer has chosen : ${computerChoice}<br>
+    messageBoardDisplay.innerHTML = `<h2>Your choice: ${userChoice}<br><br>
+                                    Computer choice: ${computerChoice}<br><br>
                                     ${resultMessage}</h2>`;
 }
 
@@ -160,6 +164,7 @@ const quitGameDisplay= document.getElementById('quit-game')
 quitGameDisplay.addEventListener('click', quitGame)
 
 function quitGame(){
+    document.getElementById('game-title').style.display= 'block';
     resetCounter()
     runGame()
 }
