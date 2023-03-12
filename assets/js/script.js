@@ -1,65 +1,51 @@
-/* runs runGame() after loading body.
-<body onload="runGame();">
-*/
-
-/** 
- * Hides not relavent elements - initial screen
- */
-function runGame() {
-    messageBoardDisplay.innerHTML = `<h2>Are you Ready? <br> Press Play</h2>`;
-    document.getElementById('play-button').style.display = 'flex';
-    document.getElementById('image').style.display = 'none';
-    document.getElementById('result').style.display = 'none';
-    document.getElementById('reset').style.display = 'none';
-    document.getElementById('quit-game').style.display= 'none';
-    
-}
 /**
- * Creat variables and get all the relevant elements
+ * Creat variables and grab all the relevant elements
  */
 const userChoiceDisplay = document.getElementById('user-choice')
 const computerChoiceDisplay = document.getElementById('computer-choice')
 const resultDisplay = document.getElementById('result')
-const possibleChoices = document.querySelectorAll('img')
 const messageBoardDisplay = document.getElementById('message-board')
 const resultMessageDisplay = document.getElementById('result-message')
-const youCounterDisplay = document.getElementById('you-counter')
+const userCounterDisplay = document.getElementById('user-counter')
 const computerCounterDisplay = document.getElementById('computer-counter')
-
-
-
-// Reset counter to Zero
+const imageChoices = document.getElementById('image')
+const gameTitle = document.getElementById('game-title')
+const playButton = document.getElementById('play-button')
 const resetButton = document.getElementById('reset')
-resetButton.addEventListener('click', resetCounter)
-function resetCounter() {
-    youCounter= 0
-    computerCounter= 0
-    youCounterDisplay.innerHTML= youCounter
-    computerCounterDisplay.innerHTML = computerCounter
-}
+const quitGameDisplay= document.getElementById('quit-game')
+const possibleChoices = document.querySelectorAll('img')
 
 let reason
 let userChoice
 let computerChoice
 let result
 let resultMessage
-let youCounter
+let userCounter
 let computerCounter
 
-/**
- * Get playbutton and add eventlistener to it
+/** 
+ * Hides not relavent elements - initial screen
  */
-const playButton = document.getElementById('play-button')
+function runGame() {
+    messageBoardDisplay.innerHTML = `<h2>Are you Ready? <br> Press Play</h2>`;
+    playButton.style.display = 'flex';
+    imageChoices.style.display = 'none';
+    resultDisplay.style.display = 'none';
+    resetButton.style.display = 'none';
+    quitGameDisplay.style.display= 'none';
+}
+
+//Add eventlistener to play button and define function
 playButton.addEventListener('click', playButtonFunction)
 
 function playButtonFunction(){
-    document.getElementById('image').style.display = 'flex';
-    document.getElementById('result').style.display = 'flex';
-    document.getElementById('play-button').style.display = 'none';
-    document.getElementById('reset').style.display = 'flex';
-    document.getElementById('message-board').innerHTML = '<h2>Choose: Rock, Paper or Scissors</h2>'
-    document.getElementById('quit-game').style.display= 'flex';
-    document.getElementById('game-title').style.display='none'
+    messageBoardDisplay.innerHTML = '<h2>Choose: Rock, Paper or Scissors</h2>';
+    imageChoices.style.display = 'flex';
+    resultDisplay.style.display = 'flex';
+    playButton.style.display = 'none';
+    resetButton.style.display = 'flex';
+    quitGameDisplay.style.display= 'flex';
+    gameTitle.style.display='none';
 }
 
 // Add eventlistener to choices images 
@@ -72,11 +58,12 @@ for (let choice = 0; choice < possibleChoices.length; choice++) {
  */
 function gameChoice(e) {
     userChoice = e.target.id
-    youCounter = parseInt(youCounterDisplay.innerHTML)
+    userCounter = parseInt(userCounterDisplay.innerHTML)
     computerCounter = parseInt(computerCounterDisplay.innerHTML)
     generateComputerChoice()
     getResult()
 }
+
 /**
  * Generate computerChoice
  * assign it to Computer Choice variable
@@ -94,6 +81,7 @@ function generateComputerChoice() {
         computerChoice = 'Scissors'
     }
 }
+
 /**
  * compares and indicates who won
  * and gives result
@@ -111,8 +99,8 @@ function getResult() {
                 break;
             case 'Scissors':
                 resultMessage = 'Rock crushes Scissors.You Win!'
-                youCounter = ++youCounter
-                youCounterDisplay.innerHTML = youCounter
+                userCounter = ++userCounter
+                userCounterDisplay.innerHTML = userCounter
                 break;
             default:
                 resultMessage = ''
@@ -121,8 +109,8 @@ function getResult() {
         switch (computerChoice) {
             case 'Rock':
                 resultMessage = 'Paper covers Rock.You Win!'
-                youCounter = ++youCounter
-                youCounterDisplay.innerHTML = youCounter
+                userCounter = ++userCounter
+                userCounterDisplay.innerHTML = userCounter
                 break;
             case 'Paper':
                 resultMessage = 'Its a draw!'                
@@ -144,8 +132,8 @@ function getResult() {
                 break;
             case 'Paper':
                 resultMessage = 'Scissors cut Paper.You Win!'
-                youCounter = ++youCounter
-                youCounterDisplay.innerHTML = youCounter
+                userCounter = ++userCounter
+                userCounterDisplay.innerHTML = userCounter
                 break;
             case 'Scissors':
                 resultMessage = 'Its a draw!'
@@ -159,15 +147,24 @@ function getResult() {
                                     ${resultMessage}</h2>`;
 }
 
-// quit Game
-const quitGameDisplay= document.getElementById('quit-game')
-quitGameDisplay.addEventListener('click', quitGame)
-
-function quitGame(){
-    document.getElementById('game-title').style.display= 'block';
-    resetCounter()
-    runGame()
+// Add event listener to reset button and define function
+resetButton.addEventListener('click', resetCounter)
+function resetCounter() {
+    userCounter= 0
+    computerCounter= 0
+    userCounterDisplay.innerHTML= userCounter
+    computerCounterDisplay.innerHTML = computerCounter
 }
 
 
-    
+//Add event listener to quit game button and define function
+quitGameDisplay.addEventListener('click', quitGame)
+
+/**
+ * To quit the game and go back to start
+ */
+function quitGame(){
+    gameTitle.style.display= 'block';
+    resetCounter()
+    runGame()
+}
