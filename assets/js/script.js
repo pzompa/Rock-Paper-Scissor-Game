@@ -1,11 +1,9 @@
+/*jshint esversion: 6 */
 /**
- * Creat variables and grab all the relevant elements
+ * Create variables and grab all the relevant elements
  */
-const userChoiceDisplay = document.getElementById('user-choice');
-const computerChoiceDisplay = document.getElementById('computer-choice');
 const resultDisplay = document.getElementById('result');
 const messageBoardDisplay = document.getElementById('message-board');
-const resultMessageDisplay = document.getElementById('result-message');
 const userCounterDisplay = document.getElementById('user-counter');
 const computerCounterDisplay = document.getElementById('computer-counter');
 const imageChoices = document.getElementById('image');
@@ -15,10 +13,9 @@ const resetButton = document.getElementById('reset');
 const quitGameDisplay= document.getElementById('quit-game');
 const possibleChoices = document.querySelectorAll('img');
 
-let reason;
+
 let userChoice;
 let computerChoice;
-let result;
 let resultMessage;
 let userCounter;
 let computerCounter;
@@ -47,7 +44,7 @@ function playButtonFunction(){
 
 // Add eventlistener to choices images 
 for (let choice = 0; choice < possibleChoices.length; choice++) {
-    possibleChoices[choice].addEventListener('click', gameChoice)
+    possibleChoices[choice].addEventListener('click', gameChoice);
 }
 
 /**
@@ -118,7 +115,7 @@ function getResult() {
                 computerCounterDisplay.innerHTML = computerCounter;
                 break;
             default:
-                resultMessage = ''
+                resultMessage = '';
         }
     } else {
         switch (computerChoice) {
@@ -170,5 +167,3 @@ function quitGame(){
     resetCounter();
     runGame();
 }
-
-// const errorPage = document.getElementById('')
