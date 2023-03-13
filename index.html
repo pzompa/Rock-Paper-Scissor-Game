@@ -9,9 +9,9 @@
     <title>Game: Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <!--Links to display favicon on browser tab-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 </head>
 
@@ -23,7 +23,7 @@
     </header>
     <main>
         <!--Message Board screen 1 only-->
-        <div id="message-board"><h2>message board text</h2></div>
+        <div id="message-board"><h2>Are you Ready? <br> Press Play</h2></div>
 
         <!-- Score Board screen 2 only-->
         <div>
@@ -31,7 +31,7 @@
             <div id="user-choice"></div>
             <!--score-->
             <div id="result-message"></div>
-            <div class="score-board" id ="result">
+            <div class="score-board" id ="result" style="display: none;">
                 <div id='score-heading'>
                     <div><h2>You</h2></div>
                     <div><h2><span id="user-counter">0</span></h2></div>
@@ -51,11 +51,11 @@
 
         <!-- Play and Rules Button screen 1 only-->
         <div class="playbtn">
-            <button class="playbtn" id="play-button">Play</button>
+            <button class="playbtn" id="play-button" style="display: flex;">Play</button>
         </div>
 
         <!--Option Buttons screen 2 only-->
-        <div class="optionsbtn" id ="image">
+        <div class="optionsbtn" id ="image" style="display: none;">
             <div>
                 <button><img id="Rock" src="assets/images/rock.png" alt="rock icon" width="200"></button>
             </div>
@@ -69,10 +69,10 @@
 
         <!-- Reset Button screen 2 only-->
         <div class="reset-quit-btn">
-            <button id="reset">Reset</button>
-            <button class="playbtn" id="quit-game">Quit Game</button>
-            
+            <button id="reset" style="display: none;">Reset</button>
+            <button class="playbtn" id="quit-game" style="display: none;">Quit Game</button>
         </div>
+        
     </main>
     <footer>
         <div class="social-media">

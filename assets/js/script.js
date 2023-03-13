@@ -1,45 +1,42 @@
 /**
  * Creat variables and grab all the relevant elements
  */
-const userChoiceDisplay = document.getElementById('user-choice')
-const computerChoiceDisplay = document.getElementById('computer-choice')
-const resultDisplay = document.getElementById('result')
-const messageBoardDisplay = document.getElementById('message-board')
-const resultMessageDisplay = document.getElementById('result-message')
-const userCounterDisplay = document.getElementById('user-counter')
-const computerCounterDisplay = document.getElementById('computer-counter')
-const imageChoices = document.getElementById('image')
-const gameTitle = document.getElementById('game-title')
-const playButton = document.getElementById('play-button')
-const resetButton = document.getElementById('reset')
-const quitGameDisplay= document.getElementById('quit-game')
-const possibleChoices = document.querySelectorAll('img')
+const userChoiceDisplay = document.getElementById('user-choice');
+const computerChoiceDisplay = document.getElementById('computer-choice');
+const resultDisplay = document.getElementById('result');
+const messageBoardDisplay = document.getElementById('message-board');
+const resultMessageDisplay = document.getElementById('result-message');
+const userCounterDisplay = document.getElementById('user-counter');
+const computerCounterDisplay = document.getElementById('computer-counter');
+const imageChoices = document.getElementById('image');
+const gameTitle = document.getElementById('game-title');
+const playButton = document.getElementById('play-button');
+const resetButton = document.getElementById('reset');
+const quitGameDisplay= document.getElementById('quit-game');
+const possibleChoices = document.querySelectorAll('img');
 
-let reason
-let userChoice
-let computerChoice
-let result
-let resultMessage
-let userCounter
-let computerCounter
+let reason;
+let userChoice;
+let computerChoice;
+let result;
+let resultMessage;
+let userCounter;
+let computerCounter;
 
 /** 
  * Hides not relavent elements - initial screen
  */
 function runGame() {
     messageBoardDisplay.innerHTML = `<h2>Are you Ready? <br> Press Play</h2>`;
-    playButton.style.display = 'flex';
-    imageChoices.style.display = 'none';
-    resultDisplay.style.display = 'none';
-    resetButton.style.display = 'none';
-    quitGameDisplay.style.display= 'none';
+    messageBoardDisplay.style.height = '130px';
 }
 
 //Add eventlistener to play button and define function
-playButton.addEventListener('click', playButtonFunction)
+playButton.addEventListener('click', playButtonFunction);
 
 function playButtonFunction(){
-    messageBoardDisplay.innerHTML = '<h2>Choose: Rock, Paper or Scissors</h2>';
+    messageBoardDisplay.innerHTML = '<h2><br><br>Choose: Rock, Paper or Scissors</h2>';
+    messageBoardDisplay.style.height = '250px';
     imageChoices.style.display = 'flex';
     resultDisplay.style.display = 'flex';
     playButton.style.display = 'none';
@@ -57,11 +54,11 @@ for (let choice = 0; choice < possibleChoices.length; choice++) {
  * define function for click event
  */
 function gameChoice(e) {
-    userChoice = e.target.id
-    userCounter = parseInt(userCounterDisplay.innerHTML)
-    computerCounter = parseInt(computerCounterDisplay.innerHTML)
-    generateComputerChoice()
-    getResult()
+    userChoice = e.target.id;
+    userCounter = parseInt(userCounterDisplay.innerHTML);
+    computerCounter = parseInt(computerCounterDisplay.innerHTML);
+    generateComputerChoice();
+    getResult();
 }
 
 /**
@@ -69,16 +66,16 @@ function gameChoice(e) {
  * assign it to Computer Choice variable
  */
 function generateComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * possibleChoices.length + 1)
+    const randomNumber = Math.floor(Math.random() * possibleChoices.length + 1);
 
     if (randomNumber === 1) {
-        computerChoice = 'Rock'
+        computerChoice = 'Rock';
     }
     if (randomNumber === 2) {
-        computerChoice = 'Paper'
+        computerChoice = 'Paper';
     }
     if (randomNumber === 3) {
-        computerChoice = 'Scissors'
+        computerChoice = 'Scissors';
     }
 }
 
@@ -90,35 +87,35 @@ function getResult() {
     if (userChoice === 'Rock') {
         switch (computerChoice) {
             case 'Rock':
-                resultMessage = 'Its a draw!'
+                resultMessage = 'Its a draw!';
                 break;
             case 'Paper':
-                resultMessage = 'Paper covers Rock. You lose!'
-                computerCounter = ++computerCounter
-                computerCounterDisplay.innerHTML = computerCounter
+                resultMessage = 'Paper covers Rock. You lose!';
+                computerCounter = ++computerCounter;
+                computerCounterDisplay.innerHTML = computerCounter;
                 break;
             case 'Scissors':
-                resultMessage = 'Rock crushes Scissors.You Win!'
-                userCounter = ++userCounter
-                userCounterDisplay.innerHTML = userCounter
+                resultMessage = 'Rock crushes Scissors.You Win!';
+                userCounter = ++userCounter;
+                userCounterDisplay.innerHTML = userCounter;
                 break;
             default:
-                resultMessage = ''
+                resultMessage = '';
         }
     } else if (userChoice === 'Paper') {
         switch (computerChoice) {
             case 'Rock':
-                resultMessage = 'Paper covers Rock.You Win!'
-                userCounter = ++userCounter
-                userCounterDisplay.innerHTML = userCounter
+                resultMessage = 'Paper covers Rock.You Win!';
+                userCounter = ++userCounter;
+                userCounterDisplay.innerHTML = userCounter;
                 break;
             case 'Paper':
-                resultMessage = 'Its a draw!'                
+                resultMessage = 'Its a draw!';               
                 break;
             case 'Scissors':
-                resultMessage = 'Scissors cut Paper.You lose!'
-                computerCounter = ++computerCounter
-                computerCounterDisplay.innerHTML = computerCounter
+                resultMessage = 'Scissors cut Paper.You lose!';
+                computerCounter = ++computerCounter;
+                computerCounterDisplay.innerHTML = computerCounter;
                 break;
             default:
                 resultMessage = ''
@@ -126,20 +123,20 @@ function getResult() {
     } else {
         switch (computerChoice) {
             case 'Rock':
-                resultMessage = 'Rock crushes Scissors.You lose!'
-                computerCounter = ++computerCounter
-                computerCounterDisplay.innerHTML = computerCounter
+                resultMessage = 'Rock crushes Scissors.You lose!';
+                computerCounter = ++computerCounter;
+                computerCounterDisplay.innerHTML = computerCounter;
                 break;
             case 'Paper':
-                resultMessage = 'Scissors cut Paper.You Win!'
-                userCounter = ++userCounter
-                userCounterDisplay.innerHTML = userCounter
+                resultMessage = 'Scissors cut Paper.You Win!';
+                userCounter = ++userCounter;
+                userCounterDisplay.innerHTML = userCounter;
                 break;
             case 'Scissors':
-                resultMessage = 'Its a draw!'
+                resultMessage = 'Its a draw!';
                 break;
             default:
-                resultMessage = ''
+                resultMessage = '';
         }
     }
     messageBoardDisplay.innerHTML = `<h2>Your choice: ${userChoice}<br><br>
@@ -148,23 +145,30 @@ function getResult() {
 }
 
 // Add event listener to reset button and define function
-resetButton.addEventListener('click', resetCounter)
+resetButton.addEventListener('click', resetCounter);
 function resetCounter() {
-    userCounter= 0
-    computerCounter= 0
-    userCounterDisplay.innerHTML= userCounter
-    computerCounterDisplay.innerHTML = computerCounter
+    userCounter= 0;
+    computerCounter= 0;
+    userCounterDisplay.innerHTML= userCounter;
+    computerCounterDisplay.innerHTML = computerCounter;
 }
 
 
 //Add event listener to quit game button and define function
-quitGameDisplay.addEventListener('click', quitGame)
+quitGameDisplay.addEventListener('click', quitGame);
 
 /**
  * To quit the game and go back to start
  */
 function quitGame(){
+    playButton.style.display = 'flex';
+    imageChoices.style.display = 'none';
+    resultDisplay.style.display = 'none';
+    resetButton.style.display = 'none';
+    quitGameDisplay.style.display= 'none';
     gameTitle.style.display= 'block';
-    resetCounter()
-    runGame()
+    resetCounter();
+    runGame();
 }
+
+// const errorPage = document.getElementById('')
