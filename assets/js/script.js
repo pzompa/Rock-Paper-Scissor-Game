@@ -12,6 +12,8 @@ const playButton = document.getElementById('play-button');
 const resetButton = document.getElementById('reset');
 const quitGameDisplay= document.getElementById('quit-game');
 const possibleChoices = document.querySelectorAll('img');
+const rulesButton = document.getElementById('rules')
+const rules2Button = document.getElementById('rules2')
 
 
 let userChoice;
@@ -40,6 +42,8 @@ function playButtonFunction(){
     resetButton.style.display = 'flex';
     quitGameDisplay.style.display= 'flex';
     gameTitle.style.display='none';
+    rules2Button.style.display='flex';
+    rulesButton.style.display='none';
 }
 
 // Add eventlistener to choices images 
@@ -150,7 +154,6 @@ function resetCounter() {
     computerCounterDisplay.innerHTML = computerCounter;
 }
 
-
 //Add event listener to quit game button and define function
 quitGameDisplay.addEventListener('click', quitGame);
 
@@ -167,3 +170,34 @@ function quitGame(){
     resetCounter();
     runGame();
 }
+
+//Modal//
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModalBtn = document.querySelector(".btn-close");
+
+// Add event listener to rules button and define function
+rulesButton.addEventListener('click', openModal);
+function openModal () {         // open modal function
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+};
+
+
+// close the modal when the close button and overlay is clicked
+closeModalBtn.addEventListener('click', closeModal);
+overlay.addEventListener("click", closeModal);
+
+function closeModal (){
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+// close modal when the Esc key is pressed
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
