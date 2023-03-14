@@ -29,7 +29,7 @@ body {
 
 /* displays the choices and who won and why*/
 #message-board {
-    border: 3px solid rgb(55, 210, 207);
+    border: 3px solid rgb(210, 55, 55);
     border-radius: 10px;
     width: fit-content;
     height: 250px;
@@ -97,8 +97,8 @@ body {
 #play-button,
 #quit-game,
 #reset,
-#rules
-/* #rules2*/ { 
+#rules,
+#rules2 { 
     background-color: aqua;
     border-radius: 15px;
     font-size: 1.5rem;
@@ -242,9 +242,18 @@ button {
     }
 
     #message-board {
-        font-size: 1rem;
-        width: 80%;
         text-align: center;
+        border: 3px solid rgb(107, 210, 55);
+        border-radius: 10px;
+        width: 80%;
+        height: 130px;
+        padding: 20px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 1rem;
+        background-color: rgba(5, 8, 130, 0.438);
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
     #Rock,
@@ -252,6 +261,7 @@ button {
     #Scissors {
         width: 120px;
     }
+
     .modal {
         display: flex;
         flex-direction: column;
@@ -265,6 +275,7 @@ button {
         background-color: rgb(20, 37, 53);
         border-radius: 15px;
     }
+
     .modal .image{
         border-radius: 15px;
         width: 390px;
@@ -278,6 +289,7 @@ button {
         display: block;
         align-items: center;
     }
+
     .hidden {
         display: none;
     } 
@@ -289,14 +301,13 @@ button {
         width: auto;
         height: auto;
         min-height: 150px;
-        /* position: absolute; */
         z-index: 2;
         top:5%;
         left:5%;
         background-color: rgb(20, 37, 53);
-        /* border: 1px solid #ddd; */
         border-radius: 15px;
     }
+
     .modal .image{
         border-radius: 15px;
         width: 390px;
@@ -306,29 +317,42 @@ button {
     .modal .h2 {
         text-align: center;
     }
+
     .modal .flex {
         display: block;
         align-items: center;
     }
-       
-}
       
     .hidden {
         display: none;
+    }
+    
+    
 }
 
 
 @media screen and (max-width: 400px) {
     #game-title {
         font-size: 1.5rem;
-        width: 100%;
+        width: 80%;
         text-align: center;
+        margin-top:20px;
+        padding-left: 50px;
     }
 
     #message-board {
-        font-size: 0.7rem;
-        width: 80%;
         text-align: center;
+        border: 3px solid rgb(121, 7, 113);
+        border-radius: 10px;
+        width: 80%;
+        height: 90px;
+        padding: 20px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 0.6rem;
+        background-color: rgba(5, 8, 130, 0.438);
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
     #Rock,
@@ -339,7 +363,9 @@ button {
 
     #play-button,
     #quit-game,
-    #reset {
+    #reset,
+    #rules,
+    #rules2 {
         background-color: aqua;
         border-radius: 10px;
         font-size: 1rem;
@@ -363,5 +389,9 @@ button {
         background-color: rgba(5, 8, 130, 0.438);
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
-
+    .modal .image{
+        border-radius: 15px;
+        width: 220px;
+        height: 200px;
+    }
 }
