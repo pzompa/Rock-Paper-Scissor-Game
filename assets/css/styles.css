@@ -87,8 +87,6 @@ body {
     display: flex;
 }
 
-
-
 .reset-quit-btn {
     display: flex;
     margin: auto;
@@ -96,18 +94,17 @@ body {
 
 }
 
-
 #play-button,
 #quit-game,
 #reset,
-#rules,
-#rules2 {
+#rules
+/* #rules2*/ { 
     background-color: aqua;
-    border-radius: 10px;
+    border-radius: 15px;
     font-size: 1.5rem;
     color: black;
     width: fit-content;
-    margin: auto;
+    margin:auto;
     padding: 20px;
     transition-property: color;
     transition: .1s;
@@ -138,7 +135,6 @@ body {
 
 }
 
-
 .optionsbtn,
 img {
     padding: 10px;
@@ -147,8 +143,6 @@ img {
     border-radius: 50%;
     padding: 10px;
 }
-
-
 
 button {
     border-radius: 50%;
@@ -258,8 +252,71 @@ button {
     #Scissors {
         width: 120px;
     }
-
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        min-height: 150px;
+        z-index: 2;
+        top:5%;
+        left:5%;
+        background-color: rgb(20, 37, 53);
+        border-radius: 15px;
+    }
+    .modal .image{
+        border-radius: 15px;
+        width: 390px;
+        height: 370px;
+    }
+    
+    .modal .h2 {
+        text-align: center;
+    }
+    .modal .flex {
+        display: block;
+        align-items: center;
+    }
+    .hidden {
+        display: none;
+    } 
+    
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        min-height: 150px;
+        /* position: absolute; */
+        z-index: 2;
+        top:5%;
+        left:5%;
+        background-color: rgb(20, 37, 53);
+        /* border: 1px solid #ddd; */
+        border-radius: 15px;
+    }
+    .modal .image{
+        border-radius: 15px;
+        width: 390px;
+        height: 370px;
+    }
+    
+    .modal .h2 {
+        text-align: center;
+    }
+    .modal .flex {
+        display: block;
+        align-items: center;
+    }
+       
 }
+      
+    .hidden {
+        display: none;
+}
+
 
 @media screen and (max-width: 400px) {
     #game-title {
