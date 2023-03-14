@@ -23,7 +23,9 @@
     </header>
     <main>
         <!--Message Board screen 1 only-->
-        <div id="message-board"><h2>Are you Ready? <br> Press Play</h2></div>
+        <div id="message-board">
+            <h2>Are you Ready? <br> Press Play</h2>
+        </div>
 
         <!-- Score Board screen 2 only-->
         <div>
@@ -31,18 +33,30 @@
             <div id="user-choice"></div>
             <!--score-->
             <div id="result-message"></div>
-            <div class="score-board" id ="result" style="display: none;">
+            <div class="score-board" id="result" style="display: none;">
                 <div id='score-heading'>
-                    <div><h2>You</h2></div>
-                    <div><h2><span id="user-counter">0</span></h2></div>
+                    <div>
+                        <h2>You</h2>
+                    </div>
+                    <div>
+                        <h2><span id="user-counter">0</span></h2>
+                    </div>
                 </div>
                 <div>
-                    <div><h2>:</h2></div>
-                    <div><h2>:</h2></div>
+                    <div>
+                        <h2>:</h2>
+                    </div>
+                    <div>
+                        <h2>:</h2>
+                    </div>
                 </div>
                 <div id="score-number">
-                    <div><h2>Computer</h2></div>
-                    <div><h2><span id="computer-counter">0</span></h2></div>
+                    <div>
+                        <h2>Computer</h2>
+                    </div>
+                    <div>
+                        <h2><span id="computer-counter">0</span></h2>
+                    </div>
                 </div>
             </div>
             <!--Computer choice-->
@@ -52,14 +66,15 @@
         <!-- Play and Rules Button screen 1 only-->
         <div class="playbtn">
             <button class="playbtn" id="play-button" style="display: flex;">Play</button>
+            <button id="rules" style="display: flex;">Rules</button>
         </div>
 
         <!--Option Buttons screen 2 only-->
-        <div class="optionsbtn" id ="image" style="display: none;">
+        <div class="optionsbtn" id="image" style="display: none;">
             <div>
                 <button><img id="Rock" src="assets/images/rock.png" alt="rock icon" width="200"></button>
             </div>
-            <div >
+            <div>
                 <button><img id="Paper" src="assets/images/paper.png" alt="paper icon" width="200"></button>
             </div>
             <div>
@@ -70,15 +85,25 @@
         <!-- Reset Button screen 2 only-->
         <div class="reset-quit-btn">
             <button id="reset" style="display: none;">Reset</button>
+            <button id="rules2" style="display: none;">Rules</button>
             <button class="playbtn" id="quit-game" style="display: none;">Quit Game</button>
         </div>
-        
+
+        <!-- modal-->
+        <section class="modal hidden">
+            <div class="flex">
+                <h2 class="h2">Rules:</h2>
+                <img class='image' src="assets/images/rock-paper-scissors-rules.webp" alt="rules image">
+                <button class="btn-close">CLOSE</button>
+            </div>
+        </section>
+        <div class="overlay hidden"></div>
     </main>
     <footer>
         <div class="social-media">
             <!--links to social media sites. Links open in a new tab -->
             <ul>
-                <li><a  href="https://twitter.com" target="_blank" rel="noopener"
+                <li><a href="https://twitter.com" target="_blank" rel="noopener"
                         aria-label="visit our Twitter page (opens in a new tab)"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li><a href="https://youtube.com" target="_blank" rel="noopener"
@@ -86,7 +111,7 @@
                 </li>
             </ul>
         </div>
-       
+
     </footer>
 
     <script src="assets/js/script.js"></script>

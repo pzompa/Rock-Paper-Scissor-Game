@@ -14,7 +14,6 @@ body {
     width: 100%;
     height: 100%;
     background-image: url(../images/background-image.jpeg);
-    /* overflow: hidden; */
 }
 
 /*Header*/
@@ -85,11 +84,10 @@ body {
     transition-property: color;
     transition: .1s;
     font-weight: bold;
+    display: flex;
 }
 
-.playbtn:hover {
-    color: whitesmoke;
-}
+
 
 .reset-quit-btn {
     display: flex;
@@ -101,14 +99,27 @@ body {
 
 #play-button,
 #quit-game,
-#reset {
+#reset,
+#rules,
+#rules2 {
     background-color: aqua;
     border-radius: 10px;
     font-size: 1.5rem;
+    color: black;
     width: fit-content;
     margin: auto;
     padding: 20px;
-
+    transition-property: color;
+    transition: .1s;
+    font-weight: bold;
+    display: flex;
+}
+#play-button:hover,
+#quit-game:hover,
+#reset:hover,
+#rules:hover,
+#rules2:hover{
+    color: whitesmoke;
 }
 
 #error-home {
@@ -127,9 +138,6 @@ body {
 
 }
 
-#error-home:hover {
-    color: whitesmoke
-}
 
 .optionsbtn,
 img {
@@ -140,9 +148,7 @@ img {
     padding: 10px;
 }
 
-#reset:hover {
-    color: whitesmoke;
-}
+
 
 button {
     border-radius: 50%;
@@ -167,18 +173,70 @@ button {
     margin: auto;
     width: fit-content;
     color: aliceblue;
-
-
 }
 
 .social-media ul li {
-
     list-style-type: none;
     display: inline-flex;
     justify-content: center;
-
 }
 
+/* Modal*/
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    min-height: 150px;
+    position: absolute;
+    z-index: 2;
+    top:5%;
+    left:25%;
+    background-color: rgb(20, 37, 53);
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.modal .image{
+    border-radius: 15px;
+}
+
+.modal .h2 {
+    text-align: center;
+}
+.modal .flex {
+    display: block;
+    align-items: center;
+}
+  
+.btn-close {
+    margin: auto;
+    background: #a70a0a00;
+    display: flex;
+    color:whitesmoke;
+    border: none;
+}
+.btn-close:hover{
+    color:red;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+  
+.hidden {
+    display: none;
+}
 /* Media queries for small screen (max screen size 800px and 450) */
 
 @media screen and (max-width: 800px) {
@@ -200,6 +258,7 @@ button {
     #Scissors {
         width: 120px;
     }
+
 }
 
 @media screen and (max-width: 400px) {
