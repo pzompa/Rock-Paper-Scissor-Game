@@ -19,7 +19,7 @@
     <!-- Heading screen 1 and 2 -->
     <header>
         <h1 id="game-title">Rock, Paper and Scissors Game</h1>
-
+        <h1 id="test"></h1>
     </header>
     <main>
         <!--Message Board screen 1 only-->
@@ -35,28 +35,16 @@
             <div id="result-message"></div>
             <div class="score-board" id="result" style="display: none;">
                 <div id='score-heading'>
-                    <div>
-                        <h2>You</h2>
-                    </div>
-                    <div>
-                        <h2><span id="user-counter">0</span></h2>
-                    </div>
+                    <div><h2>You</h2></div>
+                    <div><h2><span id="user-counter">0</span></h2></div>
                 </div>
                 <div>
-                    <div>
-                        <h2>:</h2>
-                    </div>
-                    <div>
-                        <h2>:</h2>
-                    </div>
+                    <div><h2>:</h2></div>
+                    <div><h2>:</h2></div>
                 </div>
                 <div id="score-number">
-                    <div>
-                        <h2>Computer</h2>
-                    </div>
-                    <div>
-                        <h2><span id="computer-counter">0</span></h2>
-                    </div>
+                    <div><h2>Computer</h2></div>
+                    <div><h2><span id="computer-counter">0</span></h2></div>
                 </div>
             </div>
             <!--Computer choice-->
@@ -85,7 +73,8 @@
         <!-- Reset Button screen 2 only-->
         <div class="reset-quit-btn">
             <button id="reset" style="display: none;">Reset</button>
-            <button class="playbtn" id="quit-game" style="display: none;">Quit Game</button>
+            <button id="rules2" style="display: none;">Rules</button>
+            <button class="playbtn" id="quit-game" style="display: none;">Quit</button>
         </div>
 
         <!-- modal-->
@@ -110,7 +99,6 @@
                 </li>
             </ul>
         </div>
-
     </footer>
 
     <script src="assets/js/script.js"></script>
