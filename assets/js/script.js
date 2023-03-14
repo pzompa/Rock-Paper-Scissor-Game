@@ -15,7 +15,6 @@ const possibleChoices = document.querySelectorAll('img');
 const rulesButton = document.getElementById('rules')
 const rules2Button = document.getElementById('rules2')
 
-
 let userChoice;
 let computerChoice;
 let resultMessage;
@@ -27,7 +26,15 @@ let computerCounter;
  */
 function runGame() {
     messageBoardDisplay.innerHTML = `<h2>Are you Ready? <br> Press Play</h2>`;
-    messageBoardDisplay.style.height = '130px';
+    if(screen.width > 1000){
+        messageBoardDisplay.style.height = '150px';
+    }
+    if(screen.width < 1000 && screen.width > 420){
+        messageBoardDisplay.style.height = '130px';
+    }
+    if(screen.width < 415){
+        messageBoardDisplay.style.height = '90px';
+    }
 }
 
 //Add eventlistener to play button and define function
@@ -35,7 +42,15 @@ playButton.addEventListener('click', playButtonFunction);
 
 function playButtonFunction(){
     messageBoardDisplay.innerHTML = '<h2><br><br>Choose: Rock, Paper or Scissors</h2>';
-    messageBoardDisplay.style.height = '250px';
+    if(screen.width > 1000){
+        messageBoardDisplay.style.height = '250px';
+    }
+    if(screen.width < 1000 && screen.width > 420){
+        messageBoardDisplay.style.height = '250px';
+    }
+    if(screen.width < 415){
+        messageBoardDisplay.style.height = '150px';
+    }
     imageChoices.style.display = 'flex';
     resultDisplay.style.display = 'flex';
     playButton.style.display = 'none';
@@ -167,6 +182,8 @@ function quitGame(){
     resetButton.style.display = 'none';
     quitGameDisplay.style.display= 'none';
     gameTitle.style.display= 'block';
+    rulesButton.style.display='flex';
+    rules2Button.style.display='none';
     resetCounter();
     runGame();
 }
@@ -179,6 +196,7 @@ const closeModalBtn = document.querySelector(".btn-close");
 
 // Add event listener to rules button and define function
 rulesButton.addEventListener('click', openModal);
+rules2Button.addEventListener('click', openModal);
 function openModal () {         // open modal function
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
