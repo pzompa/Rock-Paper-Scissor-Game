@@ -1,6 +1,8 @@
 # Project 2 JS: Rock, Paper and Scissors Game
 ## Project Goals:
 * The main goal of the Website is to provide the user with an easy-to-understand interactive JavaScript base game.
+View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
+![AmIResponsive](/assets/images/readme-file/AmIResponsive.png)
 ---
 ## Site Owner Goals:
 * To host an entertaining website.
