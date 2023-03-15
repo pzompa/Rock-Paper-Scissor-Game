@@ -13,13 +13,9 @@
 * I want to easily understand the websites function and purpose.
 * I want to easily navigate through the game.
 * I want to easily understand the rules of the game.
-### Returning Visitor Goals: (to be done)
-
+### Returning Visitor Goals:
 * I want to replay the game.
 * I want to find out if there are updates to the game.
-### Frequent User Goals:(to be done)
-* I want to check for new features added to the game.
-* I want to continue playing the game.
 ---
 ## Design:
 ### Colour Scheme:
@@ -86,29 +82,72 @@
 ---
 ## Features to be implemented
 * User data storage for returning Visitor.
+* To store Top ten player scores.
+
 ---
 ## Testing
 ### HTML validation
 * [W3C Markup Validator](https://validator.w3.org/) was used to check the validity of the HTML code and returned no error.
+![w3c html validator](/assets/images/readme-file/W3C%20HtmlValidator.png)
 
 ### CSS validation
 * [W3C CSS validator](https://jigsaw.w3.org/css-validator/) was used to check the validity of the CSS code and returned no errors.
-### Wave texting
-* Tests with [Wave testing](https://wave.webaim.org/) was  conducted to ensure that the content is accessible to user with disadvantages and returned no errors or issues.
+![w3c css validator](/assets/images/readme-file/W3C%20CssValidator.png)
+### Wave Test
+* Tests with [Wave testing](https://wave.webaim.org/report#/https://pzompa.github.io/Rock-Paper-Scissor-Game/) was  conducted to ensure that the content is accessible to user with disadvantages and returned no errors or issues.
+![wave test](/assets/images/readme-file/WaveTestScreenshot.png)
 
 ### JS validation
-* [JSHint](https://jshint.com/) was used to check the validity of the JavaScript code used for the website. No errors was returned.
+* [JSHint](https://jshint.com/) was used to check the validity of the JavaScript code used for the website. No errors was found.
+![](/assets/images/readme-file/JS%20Validator.png)
 
 ### Lighthouse Test
 * A test was conducted using Lighthouse within Google Chrome to verify performance and accessibility standards and found no issues.
+* Desktop Analysis:
+  * ![](/assets/images/readme-file/LighthouseDesktop-index.png)
+  * ![](/assets/images/readme-file/LighthouseDesktop-404.png)
+  
 
-### Button Testing:
+* Mobile Analysis:
+  * ![](/assets/images/readme-file/LighthouseMobile-index.png)
+  * ![](/assets/images/readme-file/LighthouseMobile-404.png)
+
+### Button/Function Testing:
 * All the buttons has been tested and they navigate the user to the right pages, screens and content as expected. 
 * All tests conducted on different screen sizes and functions as expected.
 
+| Screen         | Button      | Notes |
+|---	           |---	         |---	   |
+| Initial screen: | runGame Function | Initial screen is loading properly |
+| Initial screen: | Play button | The Play button function is working properly. The second screen is loading as intented. All elements on the second screen are displayed properly. |
+| Initial screen: | Rules button | Rules modal screen opened properly. Overlay blocks and blurres the background as intended. Modal screen closes when: clicked on close, Esc key, and clicked anywhere on the overlay part of the screen. |
+| Initial screen: | Message | Text is displayed correctly |
+| Initial screen: | Social Media | YouTube and Twitter links opens in a new window as intented |
+| Game screen: | (initial) Message | Text is displayed correctly |
+| Game screen: | (initial) Score | Score is properly shown as "0" |
+| Game screen: | Score | Scores are incrementing properly as intended. |
+| Game screen: | Rock,Paper,Scissors | Images are displayed properly. Click event and functions are working as intended. |
+| Game screen: | Reset Button | Scores are reset properly to "0" as intended |
+| Game screen: | Rules Button | Rules modal screen opened properly. Overlay blocks and blures as intended. Modal screen closes when: clicked on close, Esc key, and clicked anywhere on the overlay part of the screen. |
+| Game screen: | Quit Button | Exits the game and loads the initial screen as intended |
+| Game screen: | (during game) Message | Random computer choice is computed properly and user choice is registerd properly. Win, lose or draw massage is displayed proplerly |
 
 ### Responsiveness Testing:
 * All the pages were tested on different screen sizes
+* Samsung S10:
+
+<img src="assets/images/readme-file/SamsungS10Screenshot.jpeg"  width="300">
+
+* IPhone12 MAX Pro:
+
+<img src="assets/images/readme-file/IPhone12ProMax-Screenshot.jpeg"  width="300">
+
+
+* Mac Pro Desktop:
+
+![Mac Desktop](/assets/images/readme-file/MacDesktop-Screenshot.png)
+
+
 * Website was opened on the following Browsers:
   * Chrome
   * safari and
