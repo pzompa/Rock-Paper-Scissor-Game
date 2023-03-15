@@ -156,10 +156,10 @@ function getResult() {
         }
     }
     if(userCounter === 10){
-        quitGame()
+        quitGame();
         messageBoardDisplay.innerHTML = `Congratulations!!! <br><br>You Win the GAME !!!`;
     } else if (computerCounter === 10){
-        quitGame()
+        quitGame();
         messageBoardDisplay.innerHTML = `Sorry!!! <br><br>Computer Wins the GAME !!!`;
     } else {
     messageBoardDisplay.innerHTML = `<h2>Your choice: ${userChoice}<br><br>
