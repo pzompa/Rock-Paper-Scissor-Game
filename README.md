@@ -218,11 +218,11 @@ By forking the GitHub Repository we make a copy of the original repository by us
 * Used [image](https://commons.wikimedia.org/w/index.php?curid=27958688) by Enzoklop for the Rules modal.
 * The modal codes were inspired by the [freecodecamp.org](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/#:~:text=In)
 * [w3c website](https://www.w3schools.com/js/) was used extensively to test various JS codes.
-* [YouTube Tutorial](https://youtu.be/ec8vSKJuZTk) for JS based game was used for initial conception inspiration.
-* Google was used extensively for research and clear doubts throughout this project.
+* This [YouTube Tutorial](https://youtu.be/ec8vSKJuZTk) for JS based game was used as inspiration for initial conception.
+* Google was used extensively for research and to clear doubts throughout this project.
 
 ### Acknowledgment:
-* My mentor Gereth McGirr from Code Institute has been very helpful with tips and advice.
+* My mentor Gereth McGirr from Code Institute has been very helpful with tips and advices.
 * My Family for their patience, love and support.
 
 
