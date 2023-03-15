@@ -32,10 +32,24 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 ### Imagery:
 * A galaxy background image is used to have a mysterious and soothing effect on the user. 
 ---
-## Wireframes:(to be done)
-* Home Wireframes….link or image
-* Mobile Wireframe…link or image
-* 404 Page Wireframe--- link or image
+## Wireframes:
+* For Desktop
+  * Initial Screen Wireframe
+  ![Initial Screen for Desktop](/assets/images/readme-file/Initial%20Screen-Big%20Screen.png)
+
+  * Game Screen Wireframe
+  ![Game Screen for Desktop](/assets/images/readme-file/Game%20Screen-Big%20Screen.png)
+
+  * 404 Page
+  ![404 Screen for Desktop](/assets/images/readme-file/404%20Page.png)
+
+* For Mobile
+  * Initial Screen Wireframe
+  ![Initial Screen for Mobile](/assets/images/readme-file/Initial%20Screen-%20mobile.png)
+
+  * Game Screen Wireframe
+  ![Game Screen for Mobile](/assets/images/readme-file/Game%20Screen-mobile.png)
+
 ---
 ## Features:
 * This Game contains 2 different layouts and a 404 page.
@@ -163,6 +177,38 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 * There were no responsive issues seen on all screen sizes.
 * All the pages displayed and functioned as expected.
 ---
+## Deployment
+
+### Version Control
+* The site was created using the Visual Studio code editor and pushed to github to the remote repository **‘Rock-Paper-Scissors-Game’**.
+* The following git commands were used throughout development to push code to the remote repo:
+* `git add <file>` - This command was used to add the files to the staging area before they are committed.
+* `git commit -m "commit message"` This command was used to commit changes to the local repository queue ready for the final step.
+* `git push` This command was used to push all committed code to the remote repository on github.
+### Deployment to GitHub Pages 
+ The following steps were used to deploy the website using GitHub Pages:
+
+* In the GitHub repository, navigate to the 'Settings' tab.
+* On the left hand menu select 'Pages'.
+* For the source section, select 'Branch: Main'.
+* Click Save.
+* A live link will be displayed in a green banner when published successfully. 
+* After a few minutes, the website will be build and deployed.
+* The live link can be found [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/)
+
+### Forking the repository:
+By forking the GitHub Repository we make a copy of the original repository by using the following steps...
+* Go to the GitHub repository.
+* Click on 'Fork' button in upper right hand corner.
+* Select 'Create new fork' from the drop-down menu.
+
+## Clone the Repository:
+* Click on the code drop down button
+* Click on HTTPS
+* Copy the repository link to the clipboard
+* Open your IDE of choice (git must be installed for the next steps)
+* Type git clone copied-git-url into the IDE terminal
+* The project will now of been cloned on your local machine for use.
 ## Credits:
 ### Content and Media:
 * Used [image](https://www.vecteezy.com/vector-art/691497-rock-paper-scissors-neon-icons) from Rock Paper Scissors Game Vectors by Vecteezy.
@@ -170,9 +216,10 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 * The modal codes were inspired by the [freecodecamp.org](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/#:~:text=In)
 * [w3c website](https://www.w3schools.com/js/) was used extensively to test various JS codes.
 * [YouTube Tutorial](https://youtu.be/ec8vSKJuZTk) for JS based game was used for initial conception inspiration.
+* Google was used extensively for research and clear doubts throughout this project.
 
 ### Acknowledgment:
-(to be done)
+
 
 
 
