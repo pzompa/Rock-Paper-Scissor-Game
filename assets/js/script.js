@@ -12,8 +12,8 @@ const playButton = document.getElementById('play-button');
 const resetButton = document.getElementById('reset');
 const quitGameDisplay= document.getElementById('quit-game');
 const possibleChoices = document.querySelectorAll('img');
-const rulesButton = document.getElementById('rules')
-const rules2Button = document.getElementById('rules2')
+const rulesButton = document.getElementById('rules');
+const rules2Button = document.getElementById('rules2');
 
 let userChoice;
 let computerChoice;
@@ -41,7 +41,7 @@ function runGame() {
 playButton.addEventListener('click', playButtonFunction);
 
 function playButtonFunction(){
-    messageBoardDisplay.innerHTML = '<h2><br><br>Choose: Rock, Paper or Scissors</h2>';
+    messageBoardDisplay.innerHTML = '<h2><br><br>Choose: Rock, Paper or Scissors<br><br>Whoever has 10 wins, wins the game!</h2>';
     if(screen.width > 1000){
         messageBoardDisplay.style.height = '250px';
     }
@@ -155,9 +155,17 @@ function getResult() {
                 resultMessage = '';
         }
     }
+    if(userCounter === 10){
+        quitGame()
+        messageBoardDisplay.innerHTML = `Congratulations!!! <br><br>You Win the GAME !!!`;
+    } else if (computerCounter === 10){
+        quitGame()
+        messageBoardDisplay.innerHTML = `Sorry!!! <br><br>Computer Wins the GAME !!!`;
+    } else {
     messageBoardDisplay.innerHTML = `<h2>Your choice: ${userChoice}<br><br>
                                     Computer choice: ${computerChoice}<br><br>
                                     ${resultMessage}</h2>`;
+    }
 }
 
 // Add event listener to reset button and define function
@@ -200,7 +208,7 @@ rules2Button.addEventListener('click', openModal);
 function openModal () {         // open modal function
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
-};
+}
 
 
 // close the modal when the close button and overlay is clicked
@@ -210,7 +218,7 @@ overlay.addEventListener("click", closeModal);
 function closeModal (){
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-};
+}
 
 // close modal when the Esc key is pressed
 document.addEventListener("keydown", function (e) {
