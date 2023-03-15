@@ -95,6 +95,9 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 
 * Favicon.io
   * Favicon files were created at [this Website](https://favicon.io/)
+
+* Balsamiq
+  * Balsamiq was used to create wireframes.  
 ---
 ## Features to be implemented
 * User data storage for returning Visitor.
@@ -219,7 +222,8 @@ By forking the GitHub Repository we make a copy of the original repository by us
 * Google was used extensively for research and clear doubts throughout this project.
 
 ### Acknowledgment:
-
+* My mentor Gereth McGirr from Code Institute has been very helpful with tips and advice.
+* My Family for their patience, love and support.
 
 
 
