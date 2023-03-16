@@ -2,7 +2,7 @@
 ## Project Goals:
 * The main goal of the Website is to provide the user with an easy-to-understand interactive JavaScript base game.
 View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
-![AmIResponsive](/assets/images/readme-file/AmIResponsive.png)
+![Techsini](/assets/images/readme-file/techsini.png)
 ---
 ## Site Owner Goals:
 * To host an entertaining website.
@@ -54,12 +54,15 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 ## Features:
 * This Game contains 2 different layouts and a 404 page.
 * Initial Screen
+![Initial screen](/assets/images/readme-file/Initial%20screen.png)
    * The user is invited to play the game
    * the user can view the rules of the game.
    * The rules of the game is provided in an easy to understand  modal image.
 * Play Screen
+![Play Screen](/assets/images/readme-file/Play%20Screen.png)
   * Once the user clicks the play button, he is taken to the play screen, where he has an option to play, quit the game, reset the scores or see the rules again if he chooses. 
 * 404 page
+![404 page](/assets/images/readme-file/404%20Pagescreenshot.png)
   * If the user tries to navigate to a non existing page, the user is presented with a 404 error page, where a link back to the home page is available.
 
 ---
@@ -83,8 +86,8 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 * Git
   * Used to commit and push code to GitHub in the gitpod terminal
 
-* Am I Responsive
-  * [Am I Responsive](https://ui.dev/amiresponsive) was used to create mockup of the website on different screen sizes.
+* Techsini
+  * [Techsini](https://techsini.com/multi-mockup/index.php) was used to create mockup of the website on different screen sizes.
 
 * Font Awesome
   * [Fontawesome](https://fontawesome.com/) was used for the social media links in the footer section of all the screens and pages.
