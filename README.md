@@ -56,13 +56,12 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 * Initial Screen
    * The user is invited to play the game
    * the user can view the rules of the game.
-   * The rules of the game is provided in a easy to  
-     understand  modal image.
+   * The rules of the game is provided in an easy to understand  modal image.
 * Play Screen
   * Once the user clicks the play button, he is taken to the play screen, where he has an option to play, quit the game, reset the scores or see the rules again if he chooses. 
 * 404 page
   * If the user tries to navigate to a non existing page, the user is presented with a 404 error page, where a link back to the home page is available.
-* (Add Images of the pages here)
+
 ---
 ## Technologies used:
 * HTML5
@@ -101,7 +100,7 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 ---
 ## Features to be implemented
 * User data storage for returning Visitor.
-* To store Top ten player scores.
+* To store Top player scores.
 
 ---
 ## Testing
@@ -138,7 +137,7 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 | Screen         | Button      | Notes |
 |---	           |---	         |---	   |
 | Initial screen: | runGame Function | Initial screen is loading properly |
-| Initial screen: | Play button | The Play button function is working properly. The second screen is loading as intented. All elements on the second screen are displayed properly. |
+| Initial screen: | Play button | The Play button function is working properly. The game screen is loading as intented when play button is clicked. All elements on the game screen are displayed properly. |
 | Initial screen: | Rules button | Rules modal screen opened properly. Overlay blocks and blurres the background as intended. Modal screen closes when: clicked on close, Esc key, and clicked anywhere on the overlay part of the screen. |
 | Initial screen: | Message | Text is displayed correctly |
 | Initial screen: | Social Media | YouTube and Twitter links opens in a new window as intented |
@@ -150,6 +149,7 @@ View the live website [here](https://pzompa.github.io/Rock-Paper-Scissor-Game/).
 | Game screen: | Rules Button | Rules modal screen opened properly. Overlay blocks and blures as intended. Modal screen closes when: clicked on close, Esc key, and clicked anywhere on the overlay part of the screen. |
 | Game screen: | Quit Button | Exits the game and loads the initial screen as intended |
 | Game screen: | (during game) Message | Random computer choice is computed properly and user choice is registerd properly. Win, lose or draw massage is displayed proplerly |
+| Game screen: | end game function | Once a player reaches 10 wins, the game automatically ends as expected with a winner message on the initial page.
 
 ### Responsiveness Testing:
 * All the pages were tested on different screen sizes
