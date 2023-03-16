@@ -41,7 +41,7 @@ function runGame() {
 playButton.addEventListener('click', playButtonFunction);
 
 function playButtonFunction(){
-    messageBoardDisplay.innerHTML = '<h2><br><br>Choose: Rock, Paper or Scissors<br><br>Whoever has 10 wins, wins the game!</h2>';
+    messageBoardDisplay.innerHTML = '<h2><br>Choose: Rock, Paper or Scissors<br><br>Whoever has 10 wins, wins the game!</h2>';
     if(screen.width > 1000){
         messageBoardDisplay.style.height = '250px';
     }
