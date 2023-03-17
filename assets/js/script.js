@@ -29,12 +29,13 @@ function runGame() {
     if(screen.width > 1000){
         messageBoardDisplay.style.height = '150px';
     }
-    if(screen.width < 1000 && screen.width > 420){
+    if(screen.width < 900 && screen.width >= 421){
         messageBoardDisplay.style.height = '130px';
     }
-    if(screen.width < 415){
+    if(screen.width <= 420){
         messageBoardDisplay.style.height = '90px';
     }
+
 }
 
 //Add eventlistener to play button and define function
@@ -205,11 +206,12 @@ const closeModalBtn = document.querySelector(".btn-close");
 // Add event listener to rules button and define function
 rulesButton.addEventListener('click', openModal);
 rules2Button.addEventListener('click', openModal);
-function openModal () {         // open modal function
+
+// open modal function
+function openModal () {         
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
 }
-
 
 // close the modal when the close button and overlay is clicked
 closeModalBtn.addEventListener('click', closeModal);
