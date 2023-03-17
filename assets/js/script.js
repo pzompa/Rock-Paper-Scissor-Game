@@ -70,9 +70,8 @@ for (let choice = 0; choice < possibleChoices.length; choice++) {
     possibleChoices[choice].addEventListener('click', gameChoice);
 }
 
-/**
- * define function for click event
- */
+//define function for click event
+ 
 function gameChoice(e) {
     userChoice = e.target.id;
     userCounter = parseInt(userCounterDisplay.innerHTML);
@@ -159,6 +158,7 @@ function getResult() {
                 resultMessage = '';
         }
     }
+    // announces the winner when a player reaches 10 wins and goes to initial page
     if (userCounter === 10) {
         quitGame();
         messageBoardDisplay.innerHTML = `Congratulations!!! <br><br>You Win the GAME !!!`;
