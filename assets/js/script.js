@@ -10,7 +10,7 @@ const imageChoices = document.getElementById('image');
 const gameTitle = document.getElementById('game-title');
 const playButton = document.getElementById('play-button');
 const resetButton = document.getElementById('reset');
-const quitGameDisplay= document.getElementById('quit-game');
+const quitGameDisplay = document.getElementById('quit-game');
 const possibleChoices = document.querySelectorAll('img');
 const rulesButton = document.getElementById('rules');
 const rules2Button = document.getElementById('rules2');
@@ -21,7 +21,7 @@ let resultMessage;
 let userCounter;
 let computerCounter;
 
-const choiceArray = ['Rock','Paper','Scissors'];
+const choiceArray = ['Rock', 'Paper', 'Scissors'];
 
 
 /** 
@@ -29,13 +29,13 @@ const choiceArray = ['Rock','Paper','Scissors'];
  */
 function runGame() {
     messageBoardDisplay.innerHTML = `<h2>Are you Ready? <br> Press Play</h2>`;
-    if(screen.width > 1000){
+    if (screen.width > 1000) {
         messageBoardDisplay.style.height = '150px';
     }
-    if(screen.width < 900 && screen.width >= 421){
+    if (screen.width < 900 && screen.width >= 421) {
         messageBoardDisplay.style.height = '130px';
     }
-    if(screen.width <= 420){
+    if (screen.width <= 420) {
         messageBoardDisplay.style.height = '90px';
     }
 
@@ -44,25 +44,25 @@ function runGame() {
 //Add eventlistener to play button and define function
 playButton.addEventListener('click', playButtonFunction);
 
-function playButtonFunction(){
+function playButtonFunction() {
     messageBoardDisplay.innerHTML = '<h2><br>Choose: Rock, Paper or Scissors<br><br>Whoever has 10 wins, wins the game!</h2>';
-    if(screen.width > 1000){
+    if (screen.width > 1000) {
         messageBoardDisplay.style.height = '250px';
     }
-    if(screen.width < 1000 && screen.width > 420){
+    if (screen.width < 1000 && screen.width > 420) {
         messageBoardDisplay.style.height = '250px';
     }
-    if(screen.width < 415){
+    if (screen.width < 415) {
         messageBoardDisplay.style.height = '150px';
     }
     imageChoices.style.display = 'flex';
     resultDisplay.style.display = 'flex';
     playButton.style.display = 'none';
     resetButton.style.display = 'flex';
-    quitGameDisplay.style.display= 'flex';
-    gameTitle.style.display='none';
-    rules2Button.style.display='flex';
-    rulesButton.style.display='none';
+    quitGameDisplay.style.display = 'flex';
+    gameTitle.style.display = 'none';
+    rules2Button.style.display = 'flex';
+    rulesButton.style.display = 'none';
 }
 
 // Add eventlistener to choices images 
@@ -130,7 +130,7 @@ function getResult() {
                 userCounterDisplay.innerHTML = userCounter;
                 break;
             case 'Paper':
-                resultMessage = 'Its a draw!';               
+                resultMessage = 'Its a draw!';
                 break;
             case 'Scissors':
                 resultMessage = 'Scissors cut Paper.You lose!';
@@ -159,14 +159,14 @@ function getResult() {
                 resultMessage = '';
         }
     }
-    if(userCounter === 10){
+    if (userCounter === 10) {
         quitGame();
         messageBoardDisplay.innerHTML = `Congratulations!!! <br><br>You Win the GAME !!!`;
-    } else if (computerCounter === 10){
+    } else if (computerCounter === 10) {
         quitGame();
         messageBoardDisplay.innerHTML = `Sorry!!! <br><br>Computer Wins the GAME !!!`;
     } else {
-    messageBoardDisplay.innerHTML = `<h2>Your choice: ${userChoice}<br><br>
+        messageBoardDisplay.innerHTML = `<h2>Your choice: ${userChoice}<br><br>
                                     Computer choice: ${computerChoice}<br><br>
                                     ${resultMessage}</h2>`;
     }
@@ -174,10 +174,11 @@ function getResult() {
 
 // Add event listener to reset button and define function
 resetButton.addEventListener('click', resetCounter);
+
 function resetCounter() {
-    userCounter= 0;
-    computerCounter= 0;
-    userCounterDisplay.innerHTML= userCounter;
+    userCounter = 0;
+    computerCounter = 0;
+    userCounterDisplay.innerHTML = userCounter;
     computerCounterDisplay.innerHTML = computerCounter;
 }
 
@@ -187,15 +188,15 @@ quitGameDisplay.addEventListener('click', quitGame);
 /**
  * To quit the game and go back to start
  */
-function quitGame(){
+function quitGame() {
     playButton.style.display = 'flex';
     imageChoices.style.display = 'none';
     resultDisplay.style.display = 'none';
     resetButton.style.display = 'none';
-    quitGameDisplay.style.display= 'none';
-    gameTitle.style.display= 'block';
-    rulesButton.style.display='flex';
-    rules2Button.style.display='none';
+    quitGameDisplay.style.display = 'none';
+    gameTitle.style.display = 'block';
+    rulesButton.style.display = 'flex';
+    rules2Button.style.display = 'none';
     resetCounter();
     runGame();
 }
@@ -211,11 +212,11 @@ rulesButton.addEventListener('click', openModal);
 rules2Button.addEventListener('click', openModal);
 
 // open modal function
-function openModal () {         
+function openModal() {
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
-    modal.style.left = (screen.width - modal.clientWidth)/2 + 'px'
-    modal.style.top = (screen.height - modal.clientHeight)/3 + 'px'
+    modal.style.left = (screen.width - modal.clientWidth)/2 + 'px';
+    modal.style.top = (screen.height - modal.clientHeight)/3 + 'px';
 }
 
 // close the modal when the close button and overlay is clicked
@@ -225,12 +226,14 @@ overlay.addEventListener("click", closeModal);
 function closeModal (){
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
+    for (let choice = 0; choice < possibleChoices.length; choice++) {
+        possibleChoices[choice].addEventListener('click', gameChoice);
+    }
 }
 
 // close modal when the Esc key is pressed
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    closeModal();
-  }
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+    }
 });
-
