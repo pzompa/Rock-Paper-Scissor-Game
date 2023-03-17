@@ -211,6 +211,8 @@ rules2Button.addEventListener('click', openModal);
 function openModal () {         
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
+    modal.style.left = (screen.width - modal.clientWidth)/2 + 'px'
+    modal.style.top = (screen.height - modal.clientHeight)/3 + 'px'
 }
 
 // close the modal when the close button and overlay is clicked
