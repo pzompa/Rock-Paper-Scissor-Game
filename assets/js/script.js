@@ -21,6 +21,9 @@ let resultMessage;
 let userCounter;
 let computerCounter;
 
+const choiceArray = ['Rock','Paper','Scissors'];
+
+
 /** 
  * Hides not relavent elements - initial screen
  */
@@ -83,16 +86,16 @@ function gameChoice(e) {
  * assign it to Computer Choice variable
  */
 function generateComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * possibleChoices.length + 1);
+    const randomNumber = Math.floor(Math.random() * possibleChoices.length);
 
+    if (randomNumber === 0) {
+        computerChoice = choiceArray[randomNumber];
+    }
     if (randomNumber === 1) {
-        computerChoice = 'Rock';
+        computerChoice = choiceArray[randomNumber];
     }
     if (randomNumber === 2) {
-        computerChoice = 'Paper';
-    }
-    if (randomNumber === 3) {
-        computerChoice = 'Scissors';
+        computerChoice = choiceArray[randomNumber];
     }
 }
 
