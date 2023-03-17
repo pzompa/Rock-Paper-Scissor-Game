@@ -98,10 +98,7 @@ body {
 }
 
 #play-button,
-#quit-game,
-#reset,
-#rules,
-#rules2 {
+#rules {
     background-color: aqua;
     border-radius: 15px;
     font-size: 1.5rem;
@@ -109,6 +106,22 @@ body {
     width: fit-content;
     margin: auto;
     margin-right: 20px !important;
+    padding: 20px;
+    transition-property: color;
+    transition: .1s;
+    font-weight: bold;
+    display: flex;
+}
+
+#quit-game,
+#reset,
+#rules2 {
+    background-color: aqua;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: black;
+    width: fit-content;
+    margin: auto;
     padding: 20px;
     transition-property: color;
     transition: .1s;
@@ -140,15 +153,15 @@ body {
 
 }
 
-.optionsbtn,
-img {
-    padding: 10px;
-    display: flex;
-    justify-content: space-evenly;
+.optionsbtn button {
     border-radius: 50%;
 }
 
-button {
+
+.optionsbtn, img {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
     border-radius: 50%;
 }
 
@@ -156,11 +169,6 @@ button {
 #score-number {
     display: grid;
     margin: 5px;
-}
-
-#quit-game {
-    display: flex;
-    margin: auto;
 }
 
 .social-media {
