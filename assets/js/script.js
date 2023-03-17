@@ -215,17 +215,23 @@ rules2Button.addEventListener('click', openModal);
 function openModal() {
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
-    modal.style.left = (screen.width - modal.clientWidth)/2 + 'px';
-    modal.style.top = (screen.height - modal.clientHeight)/3 + 'px';
+    // display the modal in the center of the window screen  
+    modal.style.left = (window.innerWidth - modal.clientWidth) / 2 + 'px';
+    modal.style.top = (window.innerHeight - modal.clientHeight) / 2 + 'px';
+    // makes the buttons in the background not clickable when the modal is open
+    for (let choice = 0; choice < possibleChoices.length; choice++) {
+        possibleChoices[choice].removeEventListener('click', gameChoice);
+    }
 }
 
 // close the modal when the close button and overlay is clicked
 closeModalBtn.addEventListener('click', closeModal);
 overlay.addEventListener("click", closeModal);
 
-function closeModal (){
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
+function closeModal() {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+    // makes the buttons in the background clickable again when the modal is closed
     for (let choice = 0; choice < possibleChoices.length; choice++) {
         possibleChoices[choice].addEventListener('click', gameChoice);
     }
