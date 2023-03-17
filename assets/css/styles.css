@@ -41,7 +41,7 @@ body {
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color: rgba(5, 8, 130, 0.438);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -95,31 +95,32 @@ body {
     display: flex;
     margin: auto;
     width: 80%;
-
 }
 
 #play-button,
 #quit-game,
 #reset,
 #rules,
-#rules2 { 
+#rules2 {
     background-color: aqua;
     border-radius: 15px;
     font-size: 1.5rem;
     color: black;
     width: fit-content;
-    margin:auto;
+    margin: auto;
+    margin-right: 20px !important;
     padding: 20px;
     transition-property: color;
     transition: .1s;
     font-weight: bold;
     display: flex;
 }
+
 #play-button:hover,
 #quit-game:hover,
 #reset:hover,
 #rules:hover,
-#rules2:hover{
+#rules2:hover {
     color: whitesmoke;
 }
 
@@ -145,7 +146,6 @@ img {
     display: flex;
     justify-content: space-evenly;
     border-radius: 50%;
-    padding: 10px;
 }
 
 button {
@@ -164,13 +164,11 @@ button {
 }
 
 .social-media {
-
     font-size: 2.5rem;
     list-style: none;
     padding-top: 20px;
     margin: auto;
     width: fit-content;
-    color: aliceblue;
 }
 
 .social-media ul li {
@@ -189,34 +187,36 @@ button {
     min-height: 150px;
     position: absolute;
     z-index: 2;
-    top:5%;
-    left:25%;
+    top: 25%;
+    left: 25%;
     background-color: rgb(20, 37, 53);
     border: 1px solid #ddd;
     border-radius: 15px;
 }
 
-.modal .image{
+.modal .image {
     border-radius: 15px;
 }
 
 .modal .h2 {
     text-align: center;
 }
+
 .modal .flex {
     display: block;
     align-items: center;
 }
-  
+
 .btn-close {
     margin: auto;
     background: #a70a0a00;
     display: flex;
-    color:whitesmoke;
+    color: whitesmoke;
     border: none;
 }
-.btn-close:hover{
-    color:red;
+
+.btn-close:hover {
+    color: red;
 }
 
 .overlay {
@@ -231,13 +231,14 @@ button {
     backdrop-filter: blur(3px);
     z-index: 1;
 }
-  
+
 .hidden {
     display: none;
 }
-/* Media queries for small screen (max screen size 800px and 450) */
 
-@media screen and (max-width: 800px) {
+/* Media queries for small screen (max screen size 900) */
+
+@media screen and (max-width: 900px) {
 
     #game-title {
         font-size: 2rem;
@@ -248,16 +249,7 @@ button {
     #message-board {
         text-align: center;
         border: 3px solid rgb(107, 210, 55);
-        border-radius: 10px;
         width: 80%;
-        height: 130px;
-        padding: 20px;
-        margin: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 1rem;
-        background-color: rgba(5, 8, 130, 0.438);
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
     #Rock,
@@ -266,97 +258,29 @@ button {
         width: 120px;
     }
 
-    .modal {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: auto;
-        height: auto;
-        min-height: 150px;
-        z-index: 2;
-        top:5%;
-        left:5%;
-        background-color: rgb(20, 37, 53);
-        border-radius: 15px;
-    }
-
-    .modal .image{
-        border-radius: 15px;
+    .modal .image {
         width: 390px;
         height: 370px;
     }
-    
-    .modal .h2 {
-        text-align: center;
-    }
-    .modal .flex {
-        display: block;
-        align-items: center;
-    }
-
-    .hidden {
-        display: none;
-    } 
-    
-    .modal {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: auto;
-        height: auto;
-        min-height: 150px;
-        z-index: 2;
-        top:5%;
-        left:5%;
-        background-color: rgb(20, 37, 53);
-        border-radius: 15px;
-    }
-
-    .modal .image{
-        border-radius: 15px;
-        width: 390px;
-        height: 370px;
-    }
-    
-    .modal .h2 {
-        text-align: center;
-    }
-
-    .modal .flex {
-        display: block;
-        align-items: center;
-    }
-      
-    .hidden {
-        display: none;
-    }
-    
-    
 }
 
+/* Media queries for small screen (max screen size 420px) */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     #game-title {
         font-size: 1.5rem;
         width: 80%;
-        text-align: center;
-        margin-top:20px;
+        margin-top: 20px;
         padding-left: 50px;
     }
 
     #message-board {
         text-align: center;
         border: 3px solid rgb(121, 7, 113);
-        border-radius: 10px;
         width: 80%;
-        height: 90px;
-        padding: 20px;
-        margin: auto;
+        height: 150px;
         margin-top: 20px;
-        margin-bottom: 30px;
         font-size: 0.6rem;
-        background-color: rgba(5, 8, 130, 0.438);
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
     #Rock,
@@ -370,31 +294,20 @@ button {
     #reset,
     #rules,
     #rules2 {
-        background-color: aqua;
         border-radius: 10px;
         font-size: 1rem;
-        width: fit-content;
-        margin: auto;
-        padding: 20px;
-        transition-property: color;
-        transition: .1s;
-        font-weight: bold;
     }
 
     .score-board {
-        border: 2px solid rgb(55, 210, 207);
-        border-radius: 10px;
-        width: fit-content;
-        margin: auto;
         font-size: 0.7rem;
-        text-align: center;
-        margin-top: 25px;
-        padding: 20px;
-        background-color: rgba(5, 8, 130, 0.438);
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
-    .modal .image{
-        border-radius: 15px;
+
+    .optionsbtn,
+    img {
+        padding: 3px;
+    }
+
+    .modal .image {
         width: 220px;
         height: 200px;
     }
